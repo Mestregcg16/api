@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <!-- Required meta tags -->
+        <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/download.css') }}">
+    </head>
+    <body>
+        <header>
+            <nav>
+              <!-COMEÇO DA NAVE->
+              <div class="mobile-menu ">
+                <div class="line1 "></div>
+                <!-TRAÇO DO MENU->
+                <div class="line2 "></div>
+                <!-TRAÇO DO MENU->
+                <div class="line3 "></div>
+                <!-TRAÇO DO MENU->
+              </div>
+      
+              <ul class="nav-list ">
+
+              </ul>
+            </nav>
+          </header>
+          <!-FIM DA NAVE->
+        <main>
+            <h3>Links Aceitos: Aceitamos todos os linkes do Youtube. Exceto, Os que tem restrição e idade.</h3>
+            <form class="cont-01" action="{{ url_for('baixar')}}" method="post">
+                
+                <input type="text" id="linki" name="linki" placeholder="   LINK DA MUSÍCA:"><br><br>
+                <button type="submit" id="bnt-baixar">Iniciar &#128269;</button><br>
+            </form>
+
+
+
+        </main>
+        <h2>&#127925; Disponives para Download [ {{total}} ] &#127925;</h2>
+        <article class="lista-atualizada">
+            {% for musica in arq %}
+                {%if musica.endswith(".mp3")%}
+                    <p id='msc'>{{musica}} <a id="ico" href="static/data//{{musica}}" download=""><span class="material-icons">download</span></a></p>
+                {% endif %}
+            {% endfor %}
+            <br>
+        </article>
+        <footer class="hide-on-small-only" id="roda"><p id="p">Desenvolvido por <a href='https://www.instagram.com/mestregcg16/'>Mestregcg16</a> &copy; 2022</p></footer>
+        <script src="../static/js/mobile-navbar.js "></script>
+    </body>
+</html>

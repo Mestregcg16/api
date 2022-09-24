@@ -1,0 +1,326 @@
+html, body{
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.93);
+    margin: 0;
+    padding: 0;
+}
+
+/* COMEÇO DA CONFIGURAÇÃO DO NAV MENU*/
+
+@media only screen and (max-device-width: 20000px) {
+    .nav-list {
+        z-index: 10;
+        position: absolute;
+        top: 2vh;
+        right: 0;
+        width: 36%;
+        height: 96vh;
+        background: #72588fb0;
+        flex-direction: column;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+        border-top-left-radius: 5vh;
+        padding: 2px;
+    }
+
+    a {
+        color: #fff;
+        text-decoration: none;
+        transition: 0.3s;
+        font-size: 18px;
+        font-family: sans-serif;
+    }
+    
+    a:hover {
+        opacity: 0.7;
+        color: #00ff00;
+    }
+    
+    nav {
+        position: fixed;
+        top: 26px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+        z-index: 10;
+    }
+    
+    .nav-list {
+        list-style: none;
+        display: flex;
+    }
+    
+    .nav-list li {
+        letter-spacing: 3px;
+        margin-left: 32px;
+    }
+    
+    .mobile-menu {
+        position: fixed;
+        padding-right: 0;
+        display: none;
+        cursor: pointer;
+        right: 9px;
+        margin-left: 47%;
+    }
+    
+    .nav-list li>a {
+        font-size: 32px;
+        font-family: normal, sans-serif;
+    }
+    
+    .mobile-menu div {
+        padding-right: 0vh;
+        width: 32px;
+        height: 2px;
+        background: rgb(0, 255, 42);
+        margin: 8px;
+        transition: 0.3s;
+    }
+    
+
+
+    .nav-list li {
+        margin-left: 0;
+        opacity: 0;
+    }
+    .mobile-menu {
+        display: block;
+    }
+
+    .nav-list.active {
+        transform: translateX(0);
+    }
+
+    @keyframes navLinkFade {
+        from {
+            opacity: 0;
+            transform: translateX(50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    .mobile-menu.active .line1 {
+        transform: rotate(-45deg) translate(-8px, 8px);
+    }
+
+    .mobile-menu.active .line2 {
+        opacity: 0;
+    }
+
+    .mobile-menu.active .line3 {
+        transform: rotate(45deg) translate(-5px, -7px);
+    }
+
+}
+/* FIM DA CONFIGURAÇÃO DO NAV MENU*/
+
+
+/* COMEÇO DA CONFIGURAÇÃO DO CONTEUDO MAIN*/
+main{
+    flex: 1 0;
+    text-align: center;
+    margin-top: 19vh;
+    height: auto;
+}
+
+h3{
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    font-family: normal, sans-serif;
+}
+
+
+#linki{
+    margin-right: 14px;
+    padding: 0;
+    width: 90%;
+    height: 37px;
+    border-radius: 6vh;
+}
+#bnt-baixar{
+    width: 21%;
+    height: 38px;
+    font-size: 22.5px;
+    border-radius: 13px;
+    margin-bottom: 40px;
+}
+#bnt-baixar:hover{
+    background-color: #00ff00;
+}
+.lista-atualizada{
+    flex-shrink: 0;
+    flex-direction: column;
+    justify-content: left;
+    overflow-y: scroll;
+    scroll-snap-type: mandatory;
+    width: 96%;
+    margin-left: 0.6%;
+    margin-right: 0.4%;
+    box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.844);
+    height: 23.05vmax;
+    padding: 2%;
+    border-top-left-radius: 22px;
+    border-top-right-radius: 22px;
+}
+.lista-atualizada::-webkit-scrollbar { 
+    display: none;
+  }
+h2{
+    display: flex;
+    width: 100%;
+    color: rgb(255, 0, 0);
+    font-size: 23px;
+    font-family: normal, sans-serif;
+    justify-content: center; 
+}
+
+#ico{
+    position: static;
+    margin-left: 8%;
+    right: 6px;
+}
+#msc{
+    margin: 2%;
+    display: flex;
+    font-size: 18px;
+    color: #fff;
+}
+#roda{
+    flex-shrink: 0;
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    justify-content: center; 
+    height: 4.3vh;
+    padding-left: 0;
+    width: 100vw;
+    height: 38px;
+    color: #fd0000;
+}
+#p{
+    margin-bottom: 5%;
+}
+/* FIM DA CONFIGURAÇÃO DO CONTEUDO MAIN*/
+
+
+/*CONFIGURAÇÃO DO CONTEINER-01-DA-TELA-INICIAL-cell*/
+
+@media only screen and (max-device-width: 769px) {
+    .nav-list {
+        width: 100%;
+        border-top-left-radius: 5vh;
+    }
+    #bnt-baixar{
+        width: 40%;
+        height: 40px;
+        font-size: 26px;
+        border-radius: 13px;
+    }
+    .lista-atualizada{
+        height: 23vmax;
+        width: 100%;
+        margin-bottom: 0.4px;
+    }
+    #linki{
+        width: 95%;
+        margin-left: 2.6%;
+    }
+ 
+}
+
+@media only screen and (max-device-width: 490px) {
+
+    .nav-list {
+        width: 100%;
+        border-top-left-radius: 3vh;
+    }
+
+    form.cont-01 {
+        width: 98%;
+    }
+    #bnt-baixar{
+        padding-bottom: 1vh;
+        width: 40%;
+        height: 36px;
+        font-size: 24px;
+        border-radius: 13px;
+    }
+    h2{
+        font-size: 20px;
+        bottom: 36%;
+    }
+    #msc{
+        font-size: 16px;
+    }
+    .lista-atualizada{
+        width: 94%;
+        margin-left: 5px;
+        margin-right: 16px;
+        bottom: 5.2vh;
+        height: 30%;
+    }
+    .material-icons{
+        font-size: 26px;
+    }
+    #roda{
+        padding-bottom: 0px;
+        height: 5.3vh;
+    }
+    #p{
+        font-size: 16px;
+    }
+}
+
+/*  CONFIG FOR IPHONE*/
+@media only screen and (max-device-width: 290) {
+    .nav-list {
+        top: 6.5vh;
+        width: 90%;
+        border-top-left-radius: 3vh;
+    }
+
+    form.cont-01 {
+        width: 98%;
+    }
+    #bnt-baixar{
+        padding-bottom: 1vh;
+        width: 40%;
+        height: 36px;
+        font-size: 24px;
+        border-radius: 13px;
+    }
+    h2{
+        font-size: 16px;
+        bottom: 34.9%;
+    }
+    .lista-atualizada{
+        width: 96%;
+        margin-left: 0.6%;
+        margin-right: 0.4%;
+        bottom: 5.2vh;
+        height: 30%;
+    }
+    .material-icons{
+        position: fixed;
+        display: flex;
+        bottom: 8%;
+        font-size: 43px;
+    }
+    #roda{
+        padding-bottom: 0px;
+        height: 5.3vh;
+    }
+    
+}
