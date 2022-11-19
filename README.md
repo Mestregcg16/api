@@ -1,2 +1,2 @@
 # api
-so pra testes, porém, funciona de boa.
+so para teste, porém, funciona de boa.
