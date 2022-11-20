@@ -8,24 +8,6 @@
         <link rel="stylesheet" href="{{ url_for('static', filename='css/download.css') }}">
     </head>
     <body>
-        <header>
-            <nav>
-              <!-COMEÇO DA NAVE->
-              <div class="mobile-menu ">
-                <div class="line1 "></div>
-                <!-TRAÇO DO MENU->
-                <div class="line2 "></div>
-                <!-TRAÇO DO MENU->
-                <div class="line3 "></div>
-                <!-TRAÇO DO MENU->
-              </div>
-      
-              <ul class="nav-list ">
-
-              </ul>
-            </nav>
-          </header>
-          <!-FIM DA NAVE->
         <main>
             <h3>Links Aceitos: Aceitamos todos os linkes do Youtube. Exceto, Os que tem restrição e idade.</h3>
             <form class="cont-01" action="{{ url_for('baixar')}}" method="post">
@@ -47,6 +29,5 @@
             <br>
         </article>
         <footer class="hide-on-small-only" id="roda"><p id="p">Desenvolvido por <a href='https://www.instagram.com/mestregcg16/'>Mestregcg16</a> &copy; 2022</p></footer>
-        <script src="../static/js/mobile-navbar.js "></script>
     </body>
 </html>
