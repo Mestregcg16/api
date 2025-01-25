@@ -26,9 +26,9 @@ app.get('/', (req, res) => {
 app.use(express.static('../src'))
 
 //ROTA INICIAL
-router.get('/', async (req, res) =>{
-    
-})
+app.get('/', (req, res) => {
+    res.send.json({message: 'deu certo'});
+});
 
 //CADASTRO
 router.post('/cadastro', async (req, res) => {

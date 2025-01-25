@@ -3,16 +3,20 @@ import publicRoutes from './routes/public.js'
 import privateRoutes from './routes/privat.js'
 import auth from './middlewares/auth.js';
 import cors from 'cors'
-const PORT = process.env.PORT || 3000;
+
+const PORT = process.env.PORT || 3001;
+
+// Permitir todas as origens
+app.use(cors());
+
+// Ou, se quiser permitir apenas a origem específica
+app.use(cors({
+  origin: 'http://localhost:5173',
+}));
+
 const app = express();
 app.use(express.json());
 
-// Rota principal para servir de teste
-app.get('/', (req, res) => {
-    res.send.json({message: 'deu certo'});
-});
-
-app.use(cors())
 app.use('/', publicRoutes)
 app.use('/', auth, privateRoutes)
 
