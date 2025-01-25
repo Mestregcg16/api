@@ -9,13 +9,6 @@ const jwt_secret = process.env.JWT_SECRET
 const app = express()
 
 
-import path from 'path';
-import { fileURLToPath } from 'url';
-
-// Configuração do __dirname para módulos ESm
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
 
 
 //      CAMINHO DOS ARQUIVOS
