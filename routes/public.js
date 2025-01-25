@@ -16,10 +16,6 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Rota para enviar o arquivo HTML
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'src', 'index.html')); // Substitua 'index.html' pelo nome do seu arquivo
-});
 
 
 //      CAMINHO DOS ARQUIVOS
