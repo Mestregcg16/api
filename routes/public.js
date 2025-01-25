@@ -23,6 +23,7 @@ app.use(express.static('../src'))
 
 //ROTA INICIAL
 app.get('/', (req, res) => {
+    res.status(100).json( {menssage: "no servirdor"})
     res.send.json({message: 'deu certo'});
 });
 
