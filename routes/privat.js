@@ -13,7 +13,7 @@ router.get('/listar-usuarios', async (req, res) => {
         res.status(500).json({ message:'FALHA NO SERVIDOR'})
     }
 })
-//CATALOGO
+//CATALOGo
 router.get('/catalogo', async (req, res) => {
     try {
         const jogos = await prisma.user.findMany()
