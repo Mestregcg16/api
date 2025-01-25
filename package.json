@@ -8,9 +8,9 @@
   },
  "scripts": {
   "dev": "node index.js",
-  "build": "prisma generate && node index.js",
+  "build": "npm install && prisma generate && node index.js",
   "start": "node index.js"
- },
+},
   "keywords": [],
   "author": "mestregcg16",
   "license": "ISC",
