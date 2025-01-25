@@ -1,16 +1,21 @@
-import express from 'express';
+import express, { json } from 'express';
 import publicRoutes from './routes/public.js'
 import privateRoutes from './routes/privat.js'
 import auth from './middlewares/auth.js';
 import cors from 'cors'
-
-const port = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3000;
 const app = express();
 app.use(express.json());
+
+// Rota principal para servir de teste
+app.get('/', (req, res) => {
+    res.send.json({message: 'deu certo'});
+});
+
 app.use(cors())
 app.use('/', publicRoutes)
 app.use('/', auth, privateRoutes)
 
 
 
-app.listen(3000, () => console.log("servirdor rodado"));
+app.listen(PORT, () => console.log(`Servidor rodando na porta ${PORT}`));
