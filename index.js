@@ -2,7 +2,8 @@ import express, { json } from 'express';
 import publicRoutes from './routes/public.js'
 import privateRoutes from './routes/privat.js'
 import auth from './middlewares/auth.js';
-const cors = require('cors');
+
+import cors from 'cors'
 
 
 
